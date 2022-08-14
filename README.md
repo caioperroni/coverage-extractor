@@ -83,7 +83,7 @@ Consider the `sample_onclick_both` in/out as they will give the most reliable re
 Read below important infos about each one:
 
 <details>
-<summary style="font-size: 1.5em">SITE</summary>
+<summary><h4>SITE</h4></summary>
 
 1. **sample.html**
 
@@ -131,8 +131,9 @@ Read below important infos about each one:
    ```
 
 </details>
+
 <details>
-<summary style="font-size: 1.5em">INPUTS</summary>
+<summary><h4>INPUTS</h4></summary>
 
 The JSON you will get from coverage if:
 
@@ -153,8 +154,9 @@ The JSON you will get from coverage if:
    Downloading right after clicking on both buttons, with **all possible interactions** covered and **just unused** code missing if extracted.
 
 </details>
+
 <details>
-<summary style="font-size: 1.5em">OUTPUTS</summary>
+<summary><h4>OUTPUTS</h4></summary>
 
 The result **js**, **css** and **mixed** files of extraction. Genereted by running:
 
