@@ -1,0 +1,12 @@
+.used-css {
+  background-color: blue;
+  color: white;
+}
+.dynamic-css {
+  background-color: green;
+  color: white;
+}
+.not-used-css {
+  background-color: red;
+  color: white;
+}

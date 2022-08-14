@@ -1,0 +1,40 @@
+[
+  {
+    "url": "file:///media/caio/c/proj/coverage-code-extractor/sample/site/sample.css",
+    "ranges": [
+      {
+        "start": 0,
+        "end": 55
+      }
+    ],
+    "text": ".used-css {\n  background-color: blue;\n  color: white;\n}\n.dynamic-css {\n  background-color: green;\n  color: white;\n}\n.not-used-css {\n  background-color: red;\n  color: white;\n}\n"
+  },
+  {
+    "url": "file:///media/caio/c/proj/coverage-code-extractor/sample/site/sample.html",
+    "ranges": [
+      {
+        "start": 190,
+        "end": 226
+      },
+      {
+        "start": 346,
+        "end": 353
+      },
+      {
+        "start": 742,
+        "end": 1275
+      }
+    ],
+    "text": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>sample</title>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n\n    <style>\n      .used {\n        color: blue;\n      }\n      .dynamic {\n        color: green;\n      }\n      .not-used {\n        color: red;\n      }\n    </style>\n\n    <script>\n      function addDynamic() {\n        const dyn = document.createElement(\"p\");\n        const hr = document.createElement(\"hr\");\n        dyn.classList.add(\"dynamic\");\n        dyn.innerHTML = `Added by JS <b> \\< script \\> </b> tag on <b>click</b> with <b>class=dynamic</b> defined by <b> \\< style \\> </b> tag`;\n        document.body.appendChild(hr);\n        document.body.appendChild(dyn);\n      }\n\n      window.addEventListener(\"load\", () => {\n        const used = document.createElement(\"p\");\n        used.classList.add(\"used\");\n        used.innerHTML = `Added by JS <b> \\< script \\> </b> tag on <b>load</b> with <b>class=used</b> defined by <b> \\< style \\> </b> tag`;\n\n        const button = document.createElement(\"button\");\n        button.onclick = addDynamic;\n        button.innerHTML = `Add Dynamic by JS \\< script \\> tag`;\n\n        document.body.appendChild(used);\n        document.body.appendChild(button);\n      });\n    </script>\n    <link rel=\"stylesheet\" href=\"./sample.css\" />\n    <script src=\"./sample.js\"></script>\n  </head>\n  <body></body>\n</html>\n"
+  },
+  {
+    "url": "file:///media/caio/c/proj/coverage-code-extractor/sample/site/sample.js",
+    "ranges": [
+      {
+        "start": 334,
+        "end": 956
+      }
+    ],
+    "text": "function addDynamicJS() {\n  const dyn = document.createElement(\"p\");\n  const hr = document.createElement(\"hr\");\n  dyn.classList.add(\"dynamic-css\");\n  dyn.innerHTML = `Added by JS <b>file</b> on <b>click</b> with <b>class=dynamic-css</b> defined by <b>CSS file</b>`;\n  document.body.appendChild(hr);\n  document.body.appendChild(dyn);\n}\n\nwindow.addEventListener(\"load\", () => {\n  const timeout = setTimeout(() => {\n    const hr = document.createElement(\"hr\");\n    const used = document.createElement(\"p\");\n    used.classList.add(\"used-css\");\n    used.innerHTML = `Added by JS  <b>file</b> on <b>load</b> + 10ms with <b>class=used-css</b> defined by <b>CSS file</b>`;\n\n    const button = document.createElement(\"button\");\n    button.onclick = addDynamicJS;\n    button.innerHTML = `Add Dynamic by JS file`;\n\n    document.body.appendChild(hr);\n    document.body.appendChild(used);\n    document.body.appendChild(button);\n    clearTimeout(timeout);\n  }, 10);\n});\n"
+  }
+]

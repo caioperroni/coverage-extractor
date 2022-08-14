@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sample</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./sample.css" />
+    <script src="./sample.js"></script>
+    <style>
+      .used {
+        color: blue;
+      }
+      .dynamic {
+        color: green;
+      }
+      .not-used {
+        color: red;
+      }
+    </style>
+
+    <script>
+      function addDynamic() {
+        const dyn = document.createElement("p");
+        const hr = document.createElement("hr");
+        dyn.classList.add("dynamic");
+        dyn.innerHTML = `Added by JS <b> \< script \> </b> tag on <b>click</b> with <b>class=dynamic</b> defined by <b> \< style \> </b> tag`;
+        document.body.appendChild(hr);
+        document.body.appendChild(dyn);
+      }
+
+      window.addEventListener("load", () => {
+        const used = document.createElement("p");
+        used.classList.add("used");
+        used.innerHTML = `Added by JS <b> \< script \> </b> tag on <b>load</b> with <b>class=used</b> defined by <b> \< style \> </b> tag`;
+
+        const button = document.createElement("button");
+        button.onclick = addDynamic;
+        button.innerHTML = `Add Dynamic by JS \< script \> tag`;
+
+        document.body.appendChild(used);
+        document.body.appendChild(button);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
