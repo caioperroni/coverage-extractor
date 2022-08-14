@@ -156,30 +156,30 @@ The JSON you will get from coverage if:
 <details>
 <summary style="font-size: 1.5em">OUTPUTS</summary>
 
-The result **js**, **css** and **mixed (style and script tags on htmls, mostly)** files of extraction. Genereted by running:
+The result **js**, **css** and **mixed** files of extraction. Genereted by running:
 
 1. [**sample_onload**](./sample/outputs/sample_onload/)
 
    ```sh
-   node extract.js ./sample/inputs/sample_onload.json output/sample_onload
+   node extract.js ./sample/inputs/sample_onload.json sample/outputs/sample_onload
    ```
 
 2. [**sample_onclick_doc**](./sample/outputs/sample_onclick_doc/)
 
    ```sh
-   node extract.js ./sample/inputs/sample_onclick_doc.json output/sample_onclick_doc
+   node extract.js ./sample/inputs/sample_onclick_doc.json sample/outputs/sample_onclick_doc
    ```
 
 3. [**sample_onclick_js**](./sample/outputs/sample_onclick_js/)
 
    ```sh
-   node extract.js ./sample/inputs/sample_onclick_js.json output/sample_onclick_js
+   node extract.js ./sample/inputs/sample_onclick_js.json sample/outputs/sample_onclick_js
    ```
 
 4. [**sample_onclick_both**](./sample/outputs/sample_onclick_both/)
 
    ```sh
-   node extract.js ./sample/inputs/sample_onclick_both.json output/sample_onclick_both
+   node extract.js ./sample/inputs/sample_onclick_both.json sample/outputs/sample_onclick_both
    ```
 
 </details>
