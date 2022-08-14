@@ -1,0 +1,20 @@
+.used {
+        color: blue;
+      }
+
+      
+
+
+      window.addEventListener("load", () => {
+        const used = document.createElement("p");
+        used.classList.add("used");
+        used.innerHTML = `Added by JS <b> \< script \> </b> tag on <b>load</b> with <b>class=used</b> defined by <b> \< style \> </b> tag`;
+
+        const button = document.createElement("button");
+        button.onclick = addDynamic;
+        button.innerHTML = `Add Dynamic by JS \< script \> tag`;
+
+        document.body.appendChild(used);
+        document.body.appendChild(button);
+      });
+    
